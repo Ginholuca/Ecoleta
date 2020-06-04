@@ -1,32 +1,16 @@
 import express from 'express'
 
+import PointsController from './controllers/PointsController'
+import ItemsController from './controllers/ItemsController'
+
 const routes = express.Router()
+const pointsController = new PointsController()
+const itemsController = new ItemsController()
 
-const users = ['Ginholuca', 'DeusLuca', 'BruniinX']
+routes.get('/items', itemsController.index)
 
-routes.get('/users', (req, res) => {
-  return res.json({ ok: true })
-
-  // res.json(users)
-})
-
-// app.get('/users/:id', (req, res) => {
-//   const id = Number(req.params.id)
-
-//   const user = users[id]
-
-//   return res.json(user)
-// })
-
-// app.post('/users', (req, res) => {
-//   const data = req.body
-
-//   const user = {
-//     name: data.name,
-//     email: data.email
-//   }
-
-//   return res.json(user)
-// })
+routes.post('/points', pointsController.create)
+routes.get('/points/:id', pointsController.show)
+routes.get('/points', pointsController.index)
 
 export default routes
