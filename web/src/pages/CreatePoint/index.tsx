@@ -28,7 +28,7 @@ const CreatePoint = () => {
       <header>
         <img src={logo} alt="Ecoleta" />
 
-        <Link to="/home">
+        <Link to="/">
           <FiArrowLeft/>
           Voltar para home
         </Link>
@@ -110,7 +110,7 @@ const CreatePoint = () => {
 
           <ul className="items-grid">
             {items.map(item => (
-              <li>
+              <li key={item.id}>
               <img src={item.image_url} alt={item.title} />
               <span>{item.title}</span>
             </li>
