@@ -51,7 +51,7 @@ class PointsController {
     
 
     const point = {
-      image: 'image-fake',
+      image: 'https://i0.wp.com/gamelogia.com.br/wp-content/uploads/2016/11/gamer.jpg?resize=1280%2C640&ssl=1',
       name,
       email,
       whatsapp,
