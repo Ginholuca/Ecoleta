@@ -1,2 +1,2 @@
 # Ecoleta
-Aplicação criada durante a primeira edição da Next Level Week.
+Aplicação criada durante a primeira edição da Next Level Week .
